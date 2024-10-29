@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "zibber_backend": {
+      "main": "src/zibber_backend/main.mo",
+      "type": "motoko"
+    },
+    "zibber_frontend": {
+      "dependencies": [
+        "zibber_backend"
+      ],
+      "source": [
+        "src/zibber_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "zibber_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
