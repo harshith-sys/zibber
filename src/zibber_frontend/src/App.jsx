@@ -1,31 +1,31 @@
-import { useState } from 'react';
-import { zibber_backend } from 'declarations/zibber_backend';
+import React from 'react'
+import ZibberHeader from './ZibberHeader'
+import Hero from './Hero'
+import Navbar from './Navbar'
+import Features from './Features'
+import Consulting from './Consulting'
+import ProfitSection from './ProfitSection'
+import FeatureCard from './FeatureCard'
+import Carousal from './Carousal'
+import Cards from './Cards'
+import Accordian from './Accordian'
+import Footer from './Footer'
 
 function App() {
-  const [greeting, setGreeting] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    zibber_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
-  );
+    <>
+      <Navbar/>
+      <Hero/>
+      <Features/>
+      <Consulting/>
+      <ProfitSection/>
+      <FeatureCard/>
+      <Carousal/>
+      {/* <Cards/> */}
+      <Accordian/>
+      <Footer/>
+    </>
+  )
 }
 
-export default App;
+export default App

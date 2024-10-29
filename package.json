@@ -14,5 +14,8 @@
   "type": "module",
   "workspaces": [
     "src/zibber_frontend"
-  ]
+  ],
+  "dependencies": {
+    "lucide-react": "^0.454.0"
+  }
 }
